@@ -16,25 +16,30 @@
 <script src="tree-widget.js"></script>
 
 <style type="text/css">
-    .tree {
+    .w-tree {
 
     }
 
-    .tree .list {
+    .w-tree .list {
         display: block;
         background: yellow;
         margin: 3px;
         padding: 3px;
     }
 
-    .tree .list li {
+    .w-tree .list li {
         display: block;
         background: #46ffd5;
         margin: 3px;
         padding: 3px;
     }
 
-    .tree .list ul {
+    .w-tree .list li.has__children > .item {
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .w-tree .list ul {
         margin: 3px 3px 3px 12px;
         padding: 3px;
     }
@@ -53,6 +58,8 @@
     var i01 = tree.add('Lorem #2', i0, Tree.MODE.APPEND);
     var i02 = tree.add('Lorem #3', i0, Tree.MODE.APPEND);
 
+    tree.state(i02, Tree.STATES.ENABLED)
+
     tree.add('Lorem #21', i01, Tree.MODE.APPEND);
     tree.add('Lorem #22', i01, Tree.MODE.APPEND);
     tree.add('Lorem #23', i01, Tree.MODE.APPEND);
@@ -67,7 +74,9 @@
             tree.parent(i013)
     );
 
-    var widget = new TreeWidget(tree);
+    var widget = new TreeWidget({
+        tree : tree
+    });
 
     widget.render();
 </script>

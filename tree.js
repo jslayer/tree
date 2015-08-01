@@ -106,7 +106,7 @@ Tree.prototype.children = function(pid){
  */
 Tree.prototype.state = function(uid, state){
     if (typeof state !== 'undefined'){
-        this.ste[uid] = state ? Tree.STATES.ENABLED : Tree.STATES.DISABLED;
+        this.ste[uid] = state === Tree.STATES.ENABLED ? Tree.STATES.ENABLED : Tree.STATES.DISABLED;
     }
 
     return this.ste[uid] || Tree.STATES.DISABLED;
@@ -126,9 +126,13 @@ Tree.prototype.parent = function(uid){
     return this.ixs[prx];
 };
 
+Tree.prototype.item = function(uid){
+    return this.obs[uid];
+};
+
 Tree.STATES = {
-    ENABLED : -1,
-    DISABLED : -2
+    ENABLED : 1,
+    DISABLED : 0
 };
 
 //todo: validate
