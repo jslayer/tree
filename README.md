@@ -1,1 +1,4 @@
-# tree
+# Tree
+
+    npm install
+
