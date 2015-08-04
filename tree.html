@@ -1,85 +1,14 @@
-
-
-
-
 <!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Tree sample</title>
+    <link rel="stylesheet" href="css/tree.css"/>
+    <script src="bower_components/requirejs/require.js" data-main="app.js"></script>
 </head>
 <body>
 
-
-<script src="base.js"></script>
-<script src="tree.js"></script>
-<script src="tree-widget.js"></script>
-
-<style type="text/css">
-    .w-tree {
-
-    }
-
-    .w-tree .list {
-        display: block;
-        background: yellow;
-        margin: 3px;
-        padding: 3px;
-    }
-
-    .w-tree .list li {
-        display: block;
-        background: #46ffd5;
-        margin: 3px;
-        padding: 3px;
-    }
-
-    .w-tree .list li.has__children > .item {
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .w-tree .list ul {
-        margin: 3px 3px 3px 12px;
-        padding: 3px;
-    }
-</style>
-
-<script>
-    var tree = new Tree;
-
-    var i0 = tree.add('Lorem');
-    var i1 = tree.add('Ipsum');
-    var i2 = tree.add('Dolor');
-
-//    console.log(i0);
-
-    tree.add('Lorem #1', i0, Tree.MODE.APPEND);
-    var i01 = tree.add('Lorem #2', i0, Tree.MODE.APPEND);
-    var i02 = tree.add('Lorem #3', i0, Tree.MODE.APPEND);
-
-    tree.state(i02, Tree.STATES.ENABLED)
-
-    tree.add('Lorem #21', i01, Tree.MODE.APPEND);
-    tree.add('Lorem #22', i01, Tree.MODE.APPEND);
-    tree.add('Lorem #23', i01, Tree.MODE.APPEND);
-    var i013 = tree.add('Lorem #24', i01, Tree.MODE.APPEND);
-    tree.add('Lorem #25', i01, Tree.MODE.APPEND);
-
-    tree.add('Lorem #31', i02, Tree.MODE.APPEND);
-    tree.add('Lorem #32', i02, Tree.MODE.APPEND);
-    tree.add('Lorem #33', i02, Tree.MODE.APPEND);
-
-    console.log(
-            tree.parent(i013)
-    );
-
-    var widget = new TreeWidget({
-        tree : tree
-    });
-
-    widget.render();
-</script>
+<div id="tgt" style="width: 600px; margin: 20px auto;"></div>
 
 </body>
 </html>

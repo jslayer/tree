@@ -1,1 +1,7 @@
-	
+.sass-cache/
+Gemfile.lock
+bower_components/bootstrap-sass/
+bower_components/jquery/
+bower_components/requirejs/.bower.json
+bower_components/requirejs/README.md
+bower_components/requirejs/bower.json

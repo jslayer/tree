@@ -1,0 +1,122 @@
+$icon-font-path: '../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
+
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+
+.w-tree {
+    @extend .panel;
+    @extend .panel-default;
+    font-size: 13px;
+
+    .list {
+        display: block;
+        padding: 6px 0 0;
+        margin: 0 0 6px;
+        border-bottom: 1px solid #ddd;
+
+        li {
+            display: block;
+            border: 1px solid #ddd;
+            border-bottom: none;
+
+            &.has__children {
+                background: #efefef;
+                & > .item {
+                    //font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        ul {
+            margin: 0 4px 4px 4px;
+            padding: 4px 0 0 0;
+            border-bottom: 1px solid #ddd;
+        }
+    }
+
+    .list_item {
+        padding: 4px;
+        margin: 0;
+        background: #fff;
+    }
+
+    .item {
+        display: block;
+        line-height: 18px;
+
+        &:before {
+            content: "§";
+            line-height: 16px;
+            font-size: 12px;
+            padding: 0 4px 0 0;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+
+.w-tree__cb {
+    @extend .panel-body;
+}
+
+.w-tools {}
+
+.w-tools__base {
+    @extend .btn-group;
+
+    button {
+        @extend .btn;
+        @extend .btn-default;
+        @extend .btn-xs;
+        @extend .glyphicon;
+        margin-right: 4px;
+    }
+
+    .btn_begin {
+        @extend .glyphicon-arrow-up;
+    }
+
+    .btn_end {
+        @extend .glyphicon-arrow-down;
+    }
+
+    .btn_save {
+        @extend .glyphicon-floppy-disk;
+    }
+
+    & > .w-tools__cb {}
+}
+
+.w-tools__float {
+    position: absolute;
+    z-index: 1;
+    margin-top: 2px;
+
+    button {
+        @extend .btn;
+        @extend .btn-default;
+        @extend .btn-xs;
+        @extend .glyphicon;
+        margin-right: 4px;
+    }
+
+    .btn_edit {
+        @extend .glyphicon-pencil;
+    }
+
+    .btn_after {
+        @extend .glyphicon-arrow-down;
+    }
+
+    .btn_before {
+        @extend .glyphicon-arrow-up;
+    }
+
+    .btn_append {
+        @extend .glyphicon-arrow-right;
+    }
+
+    .btn_delete {
+        @extend .glyphicon-remove;
+    }
+}

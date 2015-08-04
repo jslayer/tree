@@ -1,0 +1,23 @@
+{
+  "name": "tree",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jslayer/tree",
+  "authors": [
+    "Eugene Poltorakov <jslayer@gmail.com>"
+  ],
+  "description": "tree sample",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.20"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}
