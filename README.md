@@ -1,5 +1,7 @@
 # Tree
 
+[![Build Status](https://secure.travis-ci.org/jslayer/tree.png?branch=master)](http://travis-ci.org/jslayer/tree)
+
 ## Live example
 
    http://jslayer.github.io/tree/tree.html
