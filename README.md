@@ -3,30 +3,34 @@
 ## Install
 
     $ npm install
-    $ ./node_modules/bin/bower install
+    $ ./node_modules/.bin/bower install
 
 ## Run tests
 
     $ npm test
 
+## Run html example
+
+Open `tree.shtml`
+
 ## Used
 
-In application: requirejs
+In application: `requirejs`
 
 Development:
 
 #### Gems
 
-* Compass
+* `compass`
 
 #### Bower
 
-* bootstrap-sass
-* requirejs
+* `bootstrap-sass`
+* `requirejs`
 
 #### Testing
 
-* chai
-* mocha
-* phantomjs
-* karma
+* `chai`
+* `mocha`
+* `phantomjs`
+* `karma`
