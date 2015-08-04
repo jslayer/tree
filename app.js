@@ -3,19 +3,18 @@ require.config({
 });
 
 define(['tree', 'tree-widget'], function(Tree, TreeWidget){
-    var tree1, tree2;
-
-    tree1 = new Tree({
-        load : 't1'
-    });
-
-    if (!tree1.children(0).length){
-        tree1.add('Hello');
-        tree1.add('World');
-    }
-
     new TreeWidget({
-        tree : tree1
+        tree : (function(){
+            var t;
+
+            t = new Tree({load : 't1'});
+
+            if (!t.children(0).length){
+                t.add('Hello');
+                t.add('World');
+            }
+            return t;
+        })()
     }).render(
         document.getElementById('tgt')
     );
