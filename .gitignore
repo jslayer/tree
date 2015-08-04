@@ -2,7 +2,12 @@
 Gemfile.lock
 npm-debug.log
 node_modules
-bower_components/bootstrap-sass/
+bower_components/bootstrap-sass/assets/images
+bower_components/bootstrap-sass/assets/javascripts
+bower_components/bootstrap-sass/assets/stylesheets
+bower_components/bootstrap-sass/*.json
+bower_components/bootstrap-sass/*.md
+bower_components/bootstrap-sass/LICENSE
 bower_components/jquery/
 bower_components/requirejs/.bower.json
 bower_components/requirejs/README.md
