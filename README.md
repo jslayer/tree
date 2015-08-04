@@ -1,5 +1,9 @@
 # Tree
 
+## Live example
+
+   http://jslayer.github.io/tree/tree.html
+
 ## Install
 
     $ npm install
